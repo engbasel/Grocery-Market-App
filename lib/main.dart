@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/Splash/Viwe/SplashScreenView.dart'; // Adjust the import according to your folder structure
+import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart'; // Adjust the import according to your folder structure
 
 void main(List<String> args) {
   runApp(const GroceryApp());
