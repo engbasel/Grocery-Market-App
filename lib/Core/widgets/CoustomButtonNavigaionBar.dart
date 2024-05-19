@@ -51,15 +51,6 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
   }
 }
 
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
-  }
-}
-
 class Screen3 extends StatelessWidget {
   const Screen3({super.key});
 
