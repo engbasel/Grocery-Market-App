@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/Category/views/CatigoryViwe.dart';
 import 'package:grocerymarket/Features/Home/views/HomeViwe.dart';
+import 'package:grocerymarket/Features/ProductDetails/ProductDetailsViwe.dart';
 
 class CustomButtonNavigationBar extends StatefulWidget {
   const CustomButtonNavigationBar({super.key});
@@ -24,7 +25,7 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
   final List<Widget> _screens = [
     const HomeView(),
     const CategoryView(),
-    const Screen3(),
+    const ProductDetailsView(),
     const Screen4(),
   ];
 

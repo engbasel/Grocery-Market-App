@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BackgroundWidget extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class BackgroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xffffffff),
       body: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -46,7 +47,7 @@ class BackgroundWidget extends StatelessWidget {
               Expanded(
                 flex: 6,
                 child: Container(
-                  color: const Color(0xFFf8f9fc),
+                  color: const Color(0xffffffff),
                 ),
               ),
               Expanded(
@@ -79,8 +80,10 @@ class BackgroundWidget extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            children: children,
+          SingleChildScrollView(
+            child: Column(
+              children: children,
+            ),
           )
         ],
       ),
