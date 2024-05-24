@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Snacks/Widgets/SnacksViewboady.dart';
 
 class SnacksView extends StatelessWidget {

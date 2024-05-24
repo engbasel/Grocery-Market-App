@@ -13,10 +13,12 @@ class ProductDetailsBody extends StatelessWidget {
     return BackgroundWidget(
       children: [
         CustomAppBar(
+          horizontalPadding: 0,
+          verticalPadding: 0,
           title: "Product Details",
           onTap: () {},
-          LeadingFunction: () {},
-          Leadingicon: Icons.arrow_back_ios,
+          leadingFunction: () {},
+          leadingIcon: Icons.arrow_back_ios,
         ),
         const SizedBox(
           height: 10,
