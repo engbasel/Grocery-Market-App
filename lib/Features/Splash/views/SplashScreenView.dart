@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocerymarket/Core/widgets/CoustomButtonNavigaionBar.dart';
-import 'package:grocerymarket/constins.dart';
+import 'package:grocerymarket/Core/utils/constins.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({super.key});

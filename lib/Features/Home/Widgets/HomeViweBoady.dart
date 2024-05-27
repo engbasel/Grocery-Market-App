@@ -3,7 +3,7 @@ import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CurrentLocation.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 import 'package:grocerymarket/Features/Home/Widgets/SearchBar.dart';
-import '../../../Core/utils/ConstLists.dart';
+import '../../../Core/utils/Lists.dart';
 import '../../../Core/widgets/CoustomGridViwe.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -25,7 +25,7 @@ class HomeViewBody extends StatelessWidget {
         const CurrentLocation(),
         const CustomSearchBar(), // Ensure you instantiate CustomSearchBar
         // Expanded(child: ListViewHome()),
-        Expanded(child: CustomGridView(items: Homeitems)),
+        CustomGridView(items: Homeitems),
 
         // Add some spacing from the top
       ],

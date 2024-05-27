@@ -131,9 +131,11 @@ class ProductDetailsBody extends StatelessWidget {
         const ProductCard(),
         const ProductCard(),
         CustomButton(
+          widthInFirstOfContainer: 0,
+          widthBetweenItems: 0,
           color: 0xff5EC401,
           height: 50,
-          iconButton: Icons.abc,
+          iconButtonAtEnd: Icons.shop,
           onTap: () {},
           titleButton: 'Basel',
           width: 350,

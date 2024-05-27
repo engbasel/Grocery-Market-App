@@ -2,7 +2,10 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/Category/views/CatigoryViwe.dart';
 import 'package:grocerymarket/Features/Home/views/HomeViwe.dart';
-import 'package:grocerymarket/Features/ProductDetails/ProductDetailsViwe.dart';
+import 'package:grocerymarket/Features/ProductDetails/Views/ProductDetailsViwe.dart';
+
+import '../../Features/MoreInformation/Views/MoreInfoView.dart';
+import '../../Features/Snacks/views/Snacksview.dart';
 
 class CustomButtonNavigationBar extends StatefulWidget {
   const CustomButtonNavigationBar({super.key});
@@ -26,7 +29,8 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
     const HomeView(),
     const CategoryView(),
     const ProductDetailsView(),
-    const Screen4(),
+    const MoreInfoView()
+    // const SnacksView(),
   ];
 
   @override
@@ -49,23 +53,5 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
         // Add other parameters as needed
       ),
     );
-  }
-}
-
-class Screen3 extends StatelessWidget {
-  const Screen3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
-  }
-}
-
-class Screen4 extends StatelessWidget {
-  const Screen4({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }

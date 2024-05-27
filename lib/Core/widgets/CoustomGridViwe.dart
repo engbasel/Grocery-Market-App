@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CustomGridView extends StatelessWidget {
-  CustomGridView({super.key, required this.items});
+  final List items;
 
-  @override
-  List items;
+  const CustomGridView({super.key, required this.items});
+
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      // padding: const EdgeInsets.all(10),
-
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
       ),

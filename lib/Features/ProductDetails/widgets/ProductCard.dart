@@ -23,7 +23,7 @@ class ProductCard extends StatelessWidget {
                   'Nestle Nido Full Cream Milk Powder Instant',
                   style: TextStyle(
                     fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 SizedBox(height: 8),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/Snacks/Widgets/SnacksViewboady.dart';
+
+import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
 
 void main(List<String> args) {
   runApp(const GroceryApp());
@@ -16,8 +17,10 @@ class GroceryApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:
-          const SnacksViewboady(), // Set SplashScreenView as the initial screen
+      // home: const MoreInfoView(),
+      home: const SplashScreenView(), //
+      // const WishlistViews(),
+      routes: const {},
     );
   }
 }

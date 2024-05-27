@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 class BackgroundWidget extends StatelessWidget {
   @override
   List<Widget> children = const <Widget>[];
-
-  BackgroundWidget({super.key, required this.children});
+  AppBar? appBar;
+  BackgroundWidget({super.key, required this.children, this.appBar});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: appBar,
       backgroundColor: const Color(0xffffffff),
       body: Stack(
         clipBehavior: Clip.none,

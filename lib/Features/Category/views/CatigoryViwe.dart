@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
-import '../../../Core/utils/ConstLists.dart';
+import '../../../Core/utils/Lists.dart';
 import '../../../Core/widgets/CoustomGridViwe.dart';
 
 class CategoryView extends StatelessWidget {
