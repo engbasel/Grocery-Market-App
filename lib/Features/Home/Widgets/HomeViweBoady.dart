@@ -25,7 +25,7 @@ class HomeViewBody extends StatelessWidget {
         const CurrentLocation(),
         const CustomSearchBar(), // Ensure you instantiate CustomSearchBar
         // Expanded(child: ListViewHome()),
-        CustomGridView(items: Homeitems),
+        CustomGridView(items: homeItems),
 
         // Add some spacing from the top
       ],

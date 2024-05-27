@@ -34,20 +34,20 @@ class ProductDetailsBody extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              ListItemProductDetails(
-                ImageLink: 'assets/ProductDetails/Milkimage.png',
+              ProductImageListItem(
+                imageLink: 'assets/ProductDetails/Milkimage.png',
                 onTap: () {},
                 width: 100,
                 height: 100,
               ),
-              ListItemProductDetails(
-                ImageLink: 'assets/ProductDetails/Milkimage.png',
+              ProductImageListItem(
+                imageLink: 'assets/ProductDetails/Milkimage.png',
                 onTap: () {},
                 width: 100,
                 height: 100,
               ),
-              ListItemProductDetails(
-                ImageLink: 'assets/ProductDetails/Milkimage.png',
+              ProductImageListItem(
+                imageLink: 'assets/ProductDetails/Milkimage.png',
                 onTap: () {},
                 width: 100,
                 height: 100,

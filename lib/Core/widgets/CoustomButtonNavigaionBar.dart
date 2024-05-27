@@ -5,7 +5,6 @@ import 'package:grocerymarket/Features/Home/views/HomeViwe.dart';
 import 'package:grocerymarket/Features/ProductDetails/Views/ProductDetailsViwe.dart';
 
 import '../../Features/MoreInformation/Views/MoreInfoView.dart';
-import '../../Features/Snacks/views/Snacksview.dart';
 
 class CustomButtonNavigationBar extends StatefulWidget {
   const CustomButtonNavigationBar({super.key});

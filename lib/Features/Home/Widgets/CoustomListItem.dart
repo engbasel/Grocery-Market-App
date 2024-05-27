@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class CoustomListItem extends StatelessWidget {
+class CustomListItem extends StatelessWidget {
   final String imagePath;
   final String textData;
 
   // Constructor with required parameters
-  const CoustomListItem({
+  const CustomListItem({
     super.key,
     required this.imagePath,
     required this.textData,

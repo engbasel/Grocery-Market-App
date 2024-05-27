@@ -21,7 +21,7 @@ class CategoryView extends StatelessWidget {
           },
         ),
         CustomGridView(
-          items: catigoryitems,
+          items: categoryItems,
         ),
       ],
     );

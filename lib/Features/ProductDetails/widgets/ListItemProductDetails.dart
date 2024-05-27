@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ListItemProductDetails extends StatelessWidget {
-  String ImageLink;
-  double? width, height;
-  VoidCallback onTap;
+class ProductImageListItem extends StatelessWidget {
+  final String imageLink;
+  final double? width;
+  final double? height;
+  final VoidCallback onTap;
 
-  ListItemProductDetails({
+  const ProductImageListItem({
     super.key,
     this.height,
     this.width,
-    required this.ImageLink,
+    required this.imageLink,
     required this.onTap,
   });
 
@@ -19,7 +20,7 @@ class ListItemProductDetails extends StatelessWidget {
       onTap: onTap,
       child: Container(
         child: Image.asset(
-          ImageLink,
+          imageLink,
           height: height,
           width: width,
         ),
