@@ -45,9 +45,6 @@ class AddressesViewBoady extends StatelessWidget {
 }
 
 class CustomAddressItem extends StatelessWidget {
-//
-  //  final String homeText;
-
   final String homeText;
   final String addressText;
   final VoidCallback? onEditTap;
@@ -64,7 +61,7 @@ class CustomAddressItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    var higth = MediaQuery.of(context).size.height;
+    var height = MediaQuery.of(context).size.height;
 
     return Row(
       mainAxisAlignment:
