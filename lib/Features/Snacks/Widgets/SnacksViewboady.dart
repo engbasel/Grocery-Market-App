@@ -10,19 +10,21 @@ class SnacksViewboady extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
-      children: [
-        CustomAppBar(
-          horizontalPadding: 0, verticalPadding: 0,
-          leadingFunction: () {},
-          title: 'Snacks',
-          leadingIcon: Icons.arrow_back,
-          // place: MainAxisAlignment.start,
-          // title: 'Snacks',
-          onTap: () {},
-        ),
-        CustomGridView(items: snackItems),
-      ],
+    return SafeArea(
+      child: BackgroundWidget(
+        children: [
+          CustomAppBar(
+            horizontalPadding: 0, verticalPadding: 0,
+            leadingFunction: () {},
+            title: 'Snacks',
+            leadingIcon: Icons.arrow_back,
+            // place: MainAxisAlignment.start,
+            // title: 'Snacks',
+            onTap: () {},
+          ),
+          CustomGridView(items: snackItems),
+        ],
+      ),
     );
   }
 }

@@ -7,8 +7,10 @@ class OrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
-      children: const [],
+    return SafeArea(
+      child: BackgroundWidget(
+        children: const [],
+      ),
     );
   }
 }

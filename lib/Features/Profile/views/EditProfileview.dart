@@ -11,44 +11,46 @@ class EditProfileview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
-      children: [
-        CustomAppBar(
-          leadingIcon: Icons.arrow_back,
-          leadingFunction: () {
-            Navigator.pop(context);
-          },
-          title: 'Edit Profile',
-          onTap: () {},
-        ),
-        const CircleAvatar(
-          radius: 80,
-          backgroundImage: AssetImage('assets/MoreInformation/Oval.png'),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: PhoneNumberField(),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: PasswordField(),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: FullNameField(),
-        ),
-        const SizedBox(height: 250),
-        CustomButton(
-          width: 350,
-          height: 50,
-          text: 'Save',
-          icon: Icons.save,
-          onTap: () {
-            print('Button tapped!');
-          },
-        ),
-        const SizedBox(height: 25)
-      ],
+    return SafeArea(
+      child: BackgroundWidget(
+        children: [
+          CustomAppBar(
+            leadingIcon: Icons.arrow_back,
+            leadingFunction: () {
+              Navigator.pop(context);
+            },
+            title: 'Edit Profile',
+            onTap: () {},
+          ),
+          const CircleAvatar(
+            radius: 80,
+            backgroundImage: AssetImage('assets/MoreInformation/Oval.png'),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: PhoneNumberField(),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: PasswordField(),
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: FullNameField(),
+          ),
+          const SizedBox(height: 250),
+          CustomButton(
+            width: 350,
+            height: 50,
+            text: 'Save',
+            icon: Icons.save,
+            onTap: () {
+              print('Button tapped!');
+            },
+          ),
+          const SizedBox(height: 25)
+        ],
+      ),
     );
   }
 }

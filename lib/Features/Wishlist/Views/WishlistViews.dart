@@ -8,20 +8,22 @@ class WishlistViews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
-      children: [
-        CustomAppBar(
-          leadingIcon: Icons.arrow_back,
-          leadingFunction: () {
-            Navigator.pop(context);
-          },
-          title: 'Wishlist',
-          onTap: () {},
-        ),
-        const ProductCard(),
-        const ProductCard(),
-        const ProductCard(),
-      ],
+    return SafeArea(
+      child: BackgroundWidget(
+        children: [
+          CustomAppBar(
+            leadingIcon: Icons.arrow_back,
+            leadingFunction: () {
+              Navigator.pop(context);
+            },
+            title: 'Wishlist',
+            onTap: () {},
+          ),
+          const ProductCard(),
+          const ProductCard(),
+          const ProductCard(),
+        ],
+      ),
     );
   }
 }

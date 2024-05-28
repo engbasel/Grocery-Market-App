@@ -10,20 +10,22 @@ class CategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
-      children: [
-        const SizedBox(height: 20), // Add some spacing from the top
-        CustomAppBar(
-          title: 'Category',
-          // icon: Icons.category,
-          onTap: () {
-            print('IconButton tapped');
-          },
-        ),
-        CustomGridView(
-          items: categoryItems,
-        ),
-      ],
+    return SafeArea(
+      child: BackgroundWidget(
+        children: [
+          const SizedBox(height: 20), // Add some spacing from the top
+          CustomAppBar(
+            title: 'Category',
+            // icon: Icons.category,
+            onTap: () {
+              print('IconButton tapped');
+            },
+          ),
+          CustomGridView(
+            items: categoryItems,
+          ),
+        ],
+      ),
     );
   }
 }
