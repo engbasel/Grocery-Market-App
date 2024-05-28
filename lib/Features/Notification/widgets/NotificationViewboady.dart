@@ -10,7 +10,7 @@ class NotificationViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: [
           CustomAppBar(
             leadingIcon: Icons.arrow_back,

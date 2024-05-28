@@ -11,7 +11,7 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: [
           const SizedBox(height: 20), // Add some spacing from the top
           CustomAppBar(

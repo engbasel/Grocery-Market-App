@@ -9,7 +9,7 @@ class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: const [
           SizedBox(height: 15),
           CustomHistoryItem(),

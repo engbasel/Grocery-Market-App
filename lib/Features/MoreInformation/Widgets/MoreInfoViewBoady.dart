@@ -27,7 +27,7 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: BackgroundWidget(
+        child: GradientBackgroundScaffold(
           children: [
             CustomAppBar(
               title: 'More',

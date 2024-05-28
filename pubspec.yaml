@@ -35,14 +35,9 @@ dependencies:
   flutter_blurhash: ^0.8.2
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
+  image_picker: ^1.1.1
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter

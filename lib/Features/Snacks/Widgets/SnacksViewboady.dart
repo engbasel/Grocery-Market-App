@@ -11,7 +11,7 @@ class SnacksViewboady extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: [
           CustomAppBar(
             horizontalPadding: 0, verticalPadding: 0,

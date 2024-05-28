@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
+import 'package:grocerymarket/Features/Wishlist/Widgets/ImageUploadWidget.dart';
 
-import '../widgets/FullNameField.dart';
-import '../widgets/PasswordField.dart';
-import '../widgets/PhoneNumberField.dart';
+import '../../../Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
+import '../../../Core/widgets/CoustomTextFormFildes/PasswordField.dart';
+import '../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
 
 class EditProfileview extends StatelessWidget {
   const EditProfileview({super.key});
@@ -12,7 +13,7 @@ class EditProfileview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: [
           CustomAppBar(
             leadingIcon: Icons.arrow_back,
@@ -36,7 +37,11 @@ class EditProfileview extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: FullNameField(),
+            child: customTextFormField(
+              hintText: 'Full Name',
+              labelText: 'Full Name',
+              prefixIcon: Icons.person,
+            ),
           ),
           const SizedBox(height: 250),
           CustomButton(
@@ -48,7 +53,7 @@ class EditProfileview extends StatelessWidget {
               print('Button tapped!');
             },
           ),
-          const SizedBox(height: 25)
+          const SizedBox(height: 25),
         ],
       ),
     );

@@ -12,7 +12,7 @@ class ProductDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: BackgroundWidget(
+      child: GradientBackgroundScaffold(
         children: [
           CustomAppBar(
             horizontalPadding: 0,
@@ -27,11 +27,14 @@ class ProductDetailsBody extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return const WishlistDetailsView();
-                },
-              ));
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return const WishlistDetailsView();
+              //     },
+              //   ),
+              // );
             },
             child: Image.asset(
               'assets/ProductDetails/Milkimage.png',
@@ -138,9 +141,9 @@ class ProductDetailsBody extends StatelessWidget {
               ],
             ),
           ),
-          const ProductCard(),
-          const ProductCard(),
-          const ProductCard(),
+          ProductCard(),
+          ProductCard(),
+          ProductCard(),
           CustomButton(
             widthInFirstOfContainer: 0,
             widthBetweenItems: 0,
