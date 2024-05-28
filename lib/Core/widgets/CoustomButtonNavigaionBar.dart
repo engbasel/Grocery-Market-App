@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocerymarket/Features/Category/views/CatigoryViwe.dart';
 import 'package:grocerymarket/Features/Home/views/HomeViwe.dart';
 import 'package:grocerymarket/Features/ProductDetails/Views/ProductDetailsViwe.dart';
@@ -18,9 +19,10 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
   int _bottomNavIndex = 0; // Default index
   List<IconData> iconList = [
     Icons.home, // Example icons
-    Icons.business,
-    Icons.school,
-    Icons.settings,
+    Icons.dashboard,
+    FontAwesomeIcons.bagShopping,
+
+    Icons.menu,
   ];
 
   // List of screens for navigation

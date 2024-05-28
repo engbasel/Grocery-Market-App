@@ -36,7 +36,7 @@ class WishlistViews extends StatelessWidget {
             title: 'Wishlist',
             onTap: () {},
           ),
-          ProductCard(
+          ProductCardWidget(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) {
@@ -45,8 +45,8 @@ class WishlistViews extends StatelessWidget {
               ));
             },
           ),
-          ProductCard(),
-          ProductCard(),
+          const ProductCardWidget(),
+          const ProductCardWidget(),
         ],
       ),
     );

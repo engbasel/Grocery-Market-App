@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/OrdersAndHistory/Views/HistoryView.dart';
-import 'package:grocerymarket/Features/OrdersAndHistory/Views/OrdersView.dart';
+import 'package:grocerymarket/Features/OrdersAndHistory/Views/OngoingView.dart';
 
 class OrdersAndHistoryViewBody extends StatelessWidget {
   const OrdersAndHistoryViewBody({super.key});
@@ -25,14 +25,14 @@ class OrdersAndHistoryViewBody extends StatelessWidget {
             labelColor: Colors.green,
             indicatorColor: Colors.green,
             tabs: [
-              Tab(text: '     Orders     '),
+              Tab(text: '     Ongoing     '),
               Tab(text: '     History     '),
             ],
           ),
         ),
         body: const TabBarView(
           children: [
-            OrdersScreen(),
+            Ongoingview(),
             HistoryScreen(),
           ],
         ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
-import 'package:grocerymarket/Features/Wishlist/Widgets/ImageUploadWidget.dart';
 
 import '../../../Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
 import '../../../Core/widgets/CoustomTextFormFildes/PasswordField.dart';
@@ -12,6 +11,8 @@ class EditProfileview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: GradientBackgroundScaffold(
         children: [
@@ -23,18 +24,23 @@ class EditProfileview extends StatelessWidget {
             title: 'Edit Profile',
             onTap: () {},
           ),
+          SizedBox(height: width * 0.1),
+
           const CircleAvatar(
             radius: 80,
             backgroundImage: AssetImage('assets/MoreInformation/Oval.png'),
           ),
+          SizedBox(height: width * 0.1),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: PhoneNumberField(),
           ),
+          SizedBox(height: width * 0.02),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: PasswordField(),
           ),
+          SizedBox(height: width * 0.02),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: customTextFormField(
@@ -43,7 +49,7 @@ class EditProfileview extends StatelessWidget {
               prefixIcon: Icons.person,
             ),
           ),
-          const SizedBox(height: 250),
+          SizedBox(height: width * 0.4),
           CustomButton(
             width: 350,
             height: 50,
@@ -53,7 +59,7 @@ class EditProfileview extends StatelessWidget {
               print('Button tapped!');
             },
           ),
-          const SizedBox(height: 25),
+          // const SizedBox(height: 25),
         ],
       ),
     );

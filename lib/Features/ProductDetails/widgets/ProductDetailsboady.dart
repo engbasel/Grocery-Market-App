@@ -4,7 +4,6 @@ import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 import 'package:grocerymarket/Features/ProductDetails/widgets/CustomButton.dart';
 import 'package:grocerymarket/Features/ProductDetails/widgets/ListItemProductDetails.dart';
 import 'package:grocerymarket/Features/ProductDetails/widgets/ProductCard.dart';
-import 'package:grocerymarket/Features/Wishlist/Views/WishlistDetailsView.dart';
 
 class ProductDetailsBody extends StatelessWidget {
   const ProductDetailsBody({super.key});
@@ -141,9 +140,9 @@ class ProductDetailsBody extends StatelessWidget {
               ],
             ),
           ),
-          ProductCard(),
-          ProductCard(),
-          ProductCard(),
+          const ProductCardWidget(),
+          const ProductCardWidget(),
+          const ProductCardWidget(),
           CustomButton(
             widthInFirstOfContainer: 0,
             widthBetweenItems: 0,

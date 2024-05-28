@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocerymarket/Features/Addresses/views/AddressesView.dart';
 import 'package:grocerymarket/Features/MoreInformation/Widgets/CustomLabelItem.dart';
 import 'package:grocerymarket/Features/OrdersAndHistory/Views/OrdersAndHistoryView.dart';
 import 'package:grocerymarket/Features/Profile/views/EditProfileview.dart';
@@ -75,6 +76,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             CustomLabelItem(
               onTap: () {
                 _onItemTapped(1);
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const AddressesView();
+                  },
+                ));
               },
               icon: Icons.location_on_outlined,
               label: 'My address',

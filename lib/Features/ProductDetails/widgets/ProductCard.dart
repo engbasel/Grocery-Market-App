@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ProductCard extends StatelessWidget {
-  VoidCallback? onTap;
-  ProductCard({
+class ProductCardWidget extends StatelessWidget {
+  final VoidCallback? onTap;
+
+  const ProductCardWidget({
     super.key,
     this.onTap,
   });
