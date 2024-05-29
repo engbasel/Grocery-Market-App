@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/ProductDetails/widgets/CustomButton.dart';
+import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 
 class SnackProductCard extends StatelessWidget {
   final String imagePath;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
-import 'package:grocerymarket/Features/ProductDetails/widgets/CustomButton.dart';
+import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import 'package:grocerymarket/Features/ProductDetails/widgets/ListItemProductDetails.dart';
 import 'package:grocerymarket/Features/ProductDetails/widgets/ProductCard.dart';
 

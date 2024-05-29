@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:grocerymarket/Features/ProductDetails/widgets/CustomButton.dart';
+import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import 'package:grocerymarket/Features/Wishlist/Widgets/ImageUploadWidget.dart';
 
 import '../../../Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
