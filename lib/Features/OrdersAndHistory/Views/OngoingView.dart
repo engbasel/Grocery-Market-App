@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../Core/widgets/customBackground.dart';
 
-class Ongoingview extends StatelessWidget {
-  const Ongoingview({super.key});
+class OngoingView extends StatelessWidget {
+  const OngoingView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +14,11 @@ class Ongoingview extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 40),
             child: Text(
-              'There is n ongoing order right now. You can order from home',
+              'There is no ongoing order right now. You can order from home',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              textAlign: TextAlign.center,
             ),
           ),
-          // Image.asset('assets/OrdersAndHistory/OrdersAndHist.png'),
         ],
       ),
     );

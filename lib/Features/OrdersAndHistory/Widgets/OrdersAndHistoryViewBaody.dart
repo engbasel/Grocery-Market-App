@@ -32,7 +32,7 @@ class OrdersAndHistoryViewBody extends StatelessWidget {
         ),
         body: const TabBarView(
           children: [
-            Ongoingview(),
+            OngoingView(),
             HistoryScreen(),
           ],
         ),
