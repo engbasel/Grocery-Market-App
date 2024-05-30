@@ -27,7 +27,9 @@ class AddToWishlistBody extends StatelessWidget {
         CustomAppBar(
           title: 'Add New',
           onTap: () {},
-          leadingFunction: () {},
+          leadingFunction: () {
+            Navigator.pop(context);
+          },
           leadingIcon: Icons.arrow_back,
         ),
         const Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Addresses/widgets/AddEditAddressDialog.dart';
 import 'package:grocerymarket/Features/Addresses/widgets/CustomAddressItem.dart';
@@ -66,6 +67,9 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+
     return GradientBackgroundScaffold(
       children: [
         CustomAppBar(
@@ -97,12 +101,15 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
           );
         }),
         Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: ElevatedButton(
-            onPressed: _showAddAddressDialog,
-            child: const Text('Add Address'),
+          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+          child: CustomButton(
+            widthAtFirstOfButton: width * 0.33,
+            height: 55,
+            color: 0xFF87DD39,
+            onTap: _showAddAddressDialog,
+            titleButton: 'Add Address',
           ),
-        ),
+        )
       ],
     );
   }

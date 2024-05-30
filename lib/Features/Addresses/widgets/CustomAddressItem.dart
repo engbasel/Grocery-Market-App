@@ -27,10 +27,15 @@ class AddressItem extends StatelessWidget {
           children: [
             Text(
               homeText,
-              style: const TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+              maxLines: null, // Allow unlimited number of lines
+              softWrap: true, // Enable soft wrapping
             ),
             Text(
-              addressText,
+              addressText, maxLines: null, // Allow unlimited number of lines
+              softWrap: true, //
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ],

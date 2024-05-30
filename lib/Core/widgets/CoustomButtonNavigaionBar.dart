@@ -39,7 +39,7 @@ class _CustomButtonNavigationBarState extends State<CustomButtonNavigationBar> {
     return Scaffold(
       body: _screens[_bottomNavIndex], // Display the selected screen
       bottomNavigationBar: AnimatedBottomNavigationBar(
-        activeColor: Colors.red,
+        activeColor: const Color(0xfff48634), inactiveColor: Colors.green,
         height: 80,
         gapLocation: GapLocation.none,
         icons: iconList,
