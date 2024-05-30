@@ -17,17 +17,19 @@ final List<CustomListItem> homeItems = [
 
 final List<CustomListItem> categoryItems = [
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'categoryItems'),
+      imagePath: 'assets/Category/image 2-3.png',
+      textData: 'Fruits & Vegetables'),
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'categoryItems'),
+      imagePath: 'assets/Category/Fruits&Vegetables.png',
+      textData: 'Breakfast'),
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'Beverages'),
+      imagePath: 'assets/Category/Dairy.png', textData: 'Breakfast'),
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'Beverages'),
+      imagePath: 'assets/Category/Meat&Fish.png', textData: 'Meat & Fish'),
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'Beverages'),
+      imagePath: 'assets/Category/Snacks.png', textData: 'Snacks'),
   const CustomListItem(
-      imagePath: 'assets/Splash/AppIcon.svg', textData: 'Beverages'),
+      imagePath: 'assets/Category/Breakfast.png', textData: 'Dairy'),
 ];
 
 final List<SnackProductCard> snackItems = [
