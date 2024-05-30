@@ -6,8 +6,8 @@ import 'package:grocerymarket/Core/widgets/CoustomTextFormFildes/customTextFormF
 import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import 'package:grocerymarket/Features/Auth/Signup/views/signupView.dart';
 
-class loginviewbody extends StatelessWidget {
-  const loginviewbody({super.key});
+class LoginViewBody extends StatelessWidget {
+  const LoginViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,6 @@ class loginviewbody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 10),
-
             const Text(
               'WELCOME BACK!',
               style: TextStyle(
@@ -30,10 +29,18 @@ class loginviewbody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Don’t have a account, ',
+                  'Don’t have an account, ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                  ),
                 ),
                 GestureDetector(
-                  child: const Text('Sign up'),
+                  child: const Text(
+                    'Sign up',
+                    style: TextStyle(
+                      color: Color(0xffF37A20),
+                    ),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -44,19 +51,17 @@ class loginviewbody extends StatelessWidget {
                       ),
                     );
                   },
-                )
+                ),
               ],
             ),
-            // const Text('Username'),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
               child: customTextFormField(
-                labelText: 'labelText',
-                hintText: 'hintText',
-                // prefixIcon: prefixIcon,
+                prefixIcon: Icons.person,
+                labelText: 'User name',
+                hintText: 'username',
               ),
             ),
-            // const Text('Password'),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
               child: PasswordField(),
@@ -79,7 +84,7 @@ class loginviewbody extends StatelessWidget {
                 titleButton: 'Login',
                 widthAtFirstOfButton: 200,
               ),
-            )
+            ),
           ],
         ),
       ),

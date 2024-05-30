@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocerymarket/Features/Addresses/views/AddressesView.dart';
+import 'package:grocerymarket/Features/Auth/Login/views/LoginView.dart';
 import 'package:grocerymarket/Features/MoreInformation/Widgets/CustomLabelItem.dart';
 import 'package:grocerymarket/Features/OrdersAndHistory/Views/OrdersAndHistoryView.dart';
 import 'package:grocerymarket/Features/Profile/views/EditProfileview.dart';
@@ -164,6 +165,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             CustomLabelItem(
               onTap: () {
                 _onItemTapped(8);
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const LoginView();
+                  },
+                ));
               },
               icon: Icons.power_settings_new,
               label: 'Log out',

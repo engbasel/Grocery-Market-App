@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/Auth/Signup/Widgets/YourInformation.dart';
+import 'package:grocerymarket/Features/Auth/Signup/views/YourInformationView.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../Widgets/ChooseaPassword.dart';
-import '../Widgets/EnterVerificationCode.dart';
-import '../Widgets/Enterthepassword.dart';
-import '../Widgets/mobilenumber.dart';
+import 'EnterVerificationCodeView.dart';
+import 'ChooseaPassword.dart';
+import 'MobileNumberView.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
@@ -15,20 +14,17 @@ class SignupView extends StatelessWidget {
     final PageController pageController = PageController();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sign Up'),
-      ),
       body: Column(
         children: [
           Expanded(
             child: PageView(
               controller: pageController,
               children: const [
-                mobilenumber(),
-                Enterthepassword(),
-                EnterVerificationCode(),
-                ChooseaPassword(),
-                YourInformation()
+                MobileNumberView(),
+                ChoosePasswordView(),
+                EnterVerificationCodeView(),
+                ChoosePasswordView(),
+                YourInformationView(),
               ],
             ),
           ),
@@ -37,7 +33,10 @@ class SignupView extends StatelessWidget {
             child: SmoothPageIndicator(
               controller: pageController, // PageController
               count: 5,
-              effect: const WormEffect(), // Change the effect as needed
+              effect: const WormEffect(
+                dotColor: Color(0xffF37A20),
+                activeDotColor: Color(0xff455a64),
+              ), // Change the effect as needed
             ),
           ),
         ],

@@ -1,1 +1,1 @@
-int KdurationTime = 3;
+int KdurationTime = 2;

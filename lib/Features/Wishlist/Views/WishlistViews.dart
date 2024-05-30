@@ -45,8 +45,24 @@ class WishlistViews extends StatelessWidget {
               ));
             },
           ),
-          const ProductCardWidget(),
-          const ProductCardWidget(),
+          ProductCardWidget(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const WishlistDetailsView();
+                },
+              ));
+            },
+          ),
+          ProductCardWidget(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const WishlistDetailsView();
+                },
+              ));
+            },
+          ),
         ],
       ),
     );

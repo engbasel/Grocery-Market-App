@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/Auth/Login/views/LoginView.dart';
 
 import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
 
@@ -19,8 +18,8 @@ class GroceryApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const MoreInfoView(),
-      // home: const SplashScreenView(), //
-      home: const LoginView(), //
+      home: const SplashScreenView(), //
+      // home: const LoginView(), //
       // const WishlistViews(),
       routes: const {},
     );

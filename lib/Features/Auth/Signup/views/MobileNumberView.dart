@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
-import '../../../../Core/widgets/customBackground.dart';
 
-class ChooseaPassword extends StatelessWidget {
-  const ChooseaPassword({super.key});
+class MobileNumberView extends StatelessWidget {
+  const MobileNumberView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,22 +12,24 @@ class ChooseaPassword extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: Image.asset('assets/Auth/passwored.png'),
+            child: Image.asset(
+              'assets/Auth/PhonneNumbericon.png',
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: Text('Enter the password'),
+            child: Text('Enter your mobile number'),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: Text(
-                'It looks like you already have an account in this number. Please enter the password to proceed '),
+              'We need to verify you. We will send you a one time verification code.',
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: PhoneNumberField(),
           ),
-          const Text('Forgot  Password?'),
         ],
       ),
     );
