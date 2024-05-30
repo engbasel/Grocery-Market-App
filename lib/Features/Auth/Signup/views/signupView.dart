@@ -34,9 +34,17 @@ class SignupView extends StatelessWidget {
               controller: pageController, // PageController
               count: 5,
               effect: const WormEffect(
-                dotColor: Color(0xffF37A20),
-                activeDotColor: Color(0xff455a64),
-              ), // Change the effect as needed
+                dotHeight: 12.0,
+                dotWidth: 12.0,
+                spacing: 16.0,
+                dotColor: Colors.grey,
+                activeDotColor: Colors.green,
+              ),
+              // effect: const WormEffect(
+              //   dotColor: Color(0xffF37A20),
+              //   activeDotColor: Color(0xff455a64),
+              // ),
+              // Change the effect as needed
             ),
           ),
         ],
