@@ -12,6 +12,7 @@ class EditProfileview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
 
     return SafeArea(
       child: GradientBackgroundScaffold(
@@ -49,9 +50,9 @@ class EditProfileview extends StatelessWidget {
               prefixIcon: Icons.person,
             ),
           ),
-          SizedBox(height: width * 0.4),
+          SizedBox(height: height * 0.1),
           CustomButton(
-            width: 350,
+            width: width * 0.85,
             height: 50,
             text: 'Save',
             icon: Icons.save,
@@ -59,6 +60,8 @@ class EditProfileview extends StatelessWidget {
               print('Button tapped!');
             },
           ),
+          SizedBox(height: height * 0.1),
+
           // const SizedBox(height: 25),
         ],
       ),

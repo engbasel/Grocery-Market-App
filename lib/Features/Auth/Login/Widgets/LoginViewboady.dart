@@ -11,6 +11,8 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var MediaQueryheight = MediaQuery.of(context).size.height;
+    var MediaQuerywidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -82,7 +84,7 @@ class LoginViewBody extends StatelessWidget {
                 height: 50,
                 color: 0xff5ec401,
                 titleButton: 'Login',
-                widthAtFirstOfButton: 200,
+                widthAtFirstOfButton: MediaQuerywidth * 0.45,
               ),
             ),
           ],
