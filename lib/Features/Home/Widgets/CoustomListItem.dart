@@ -27,7 +27,7 @@ class CustomListItem extends StatelessWidget {
               // const SizedBox(height: 5),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-                child: SvgPicture.asset(
+                child: Image.asset(
                   imagePath,
                   fit: BoxFit.contain,
                 ),
