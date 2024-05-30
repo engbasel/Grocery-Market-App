@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/OrdersAndHistory/Views/EstimatedDeliveryView.dart';
 import 'package:grocerymarket/Features/OrdersAndHistory/Views/ScheduledView.dart';
+import 'package:grocerymarket/Features/OrdersAndHistory/Views/WeareonthewayView.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../Home/Widgets/CustomAppBar.dart';
 
@@ -79,6 +80,7 @@ class PageViewOrders extends StatelessWidget {
                 children: const [
                   ScheduledView(),
                   EstimatedDeliveryView(),
+                  WeareonthewayView(),
                 ],
               ),
             ),

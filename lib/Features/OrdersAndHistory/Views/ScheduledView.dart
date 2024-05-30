@@ -10,115 +10,152 @@ class ScheduledView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Your order is received',
-                  style: TextStyle(
-                    color: Color(0xff777777),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Your order is received',
+                    style: TextStyle(
+                      color: Color(0xff777777),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          CustomNavigationButton(
-            textColors: Colors.green,
-            color: const Color(0xffe2f3ec),
-            text: 'Show Delivery Details',
-            onTap: () {},
-          ),
-          const SizedBox(height: 25),
-          CustomNavigationButton(
-            color: const Color(0xffe2f3ec),
-            textColors: Colors.red,
-            text: 'Show Delivery Details',
-            onTap: () {},
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Delivery Location',
-                  style: TextStyle(
-                    color: Color(0xff777777),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: CustomNavigationButton(
+                height: 50,
+                width: 350,
+                textColors: Colors.green,
+                color: const Color(0xffe2f3ec),
+                text: 'Show Delivery Details',
+                onTap: () {},
+              ),
+            ),
+            const SizedBox(height: 25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: CustomNavigationButton(
+                height: 50,
+                width: 350,
+                color: const Color(0xffe2f3ec),
+                textColors: Colors.red,
+                text: 'Show Delivery Details',
+                onTap: () {},
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Delivery Location',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xff777777),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const DeliveryLocationItem(),
-          const Divider(
-            endIndent: 25,
-            indent: 25,
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                Text('Subtotal'),
-                Spacer(),
-                Text('BDT362'),
-              ],
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: DeliveryLocationItem(),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                Text('Delivery Charge'),
-                Spacer(),
-                Text('BDT412'),
-              ],
+            const Divider(
+              endIndent: 25,
+              indent: 25,
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Row(
-              children: [
-                Text('Total'),
-                Spacer(),
-                Text('BDT412'),
-              ],
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+              child: Row(
+                children: [
+                  Text('Subtotal'),
+                  Spacer(),
+                  Text('BDT362'),
+                ],
+              ),
             ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Payment Method',
-                  style: TextStyle(
-                    color: Color(0xff777777),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+              child: Row(
+                children: [
+                  Text('Delivery Charge'),
+                  Spacer(),
+                  Text('BDT412'),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+              child: Row(
+                children: [
+                  Text('Total'),
+                  Spacer(),
+                  Text('BDT412'),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Payment Method',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xff777777),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const CustomCurrentLocationCard(),
-          const Text(
-            'Cash on delivery has some potential risks of spreading contamination. You can select other payment methods for a contactless safe delivery.',
-          ),
-          CustomNavigationButton(
-            textColors: Colors.green,
-            color: const Color(0xfff37a20),
-            text: 'Contact with Support',
-            onTap: () {},
-          ),
-          CustomNavigationButton(
-            textColors: Colors.blueGrey,
-            color: Colors.red,
-            text: 'Cancel Order',
-            onTap: () {},
-          ),
-        ],
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: CustomCurrentLocationCard(),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Text(
+                'Cash on delivery has some potential risks of spreading contamination. You can select other payment methods for a contactless safe delivery.',
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: CustomNavigationButton(
+                height: 50,
+                width: 350,
+                textColors: Colors.white,
+                color: const Color(0xfff37a20),
+                text: 'Contact with Support',
+                onTap: () {},
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: CustomNavigationButton(
+                height: 50,
+                width: 350,
+                textColors: const Color(0xffff5552),
+                color: Colors.white,
+                text: 'Cancel Order',
+                onTap: () {},
+              ),
+            ),
+            const SizedBox(height: 20),
+          ],
+        ),
       ),
     );
   }

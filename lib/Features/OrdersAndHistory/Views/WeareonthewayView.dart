@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Features/OrdersAndHistory/Widgets/CustomCurrentLocationCard.dart';
-import 'package:grocerymarket/Features/OrdersAndHistory/Widgets/CustomNavigationButton.dart';
 
+import '../Widgets/CustomCurrentLocationCard.dart';
+import '../Widgets/CustomNavigationButton.dart';
 import '../Widgets/DeliveryLocationItem.dart';
 
-class EstimatedDeliveryView extends StatelessWidget {
-  const EstimatedDeliveryView({super.key});
+class WeareonthewayView extends StatelessWidget {
+  const WeareonthewayView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +49,26 @@ class EstimatedDeliveryView extends StatelessWidget {
                 text: 'Show Delivery Details',
                 onTap: () {},
               ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Delivery Man',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xff777777),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: DeliveryMan(),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
