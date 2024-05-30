@@ -4,14 +4,14 @@ import 'package:grocerymarket/Features/Addresses/widgets/AddEditAddressDialog.da
 import 'package:grocerymarket/Features/Addresses/widgets/CustomAddressItem.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
-class AddressesViewBoady extends StatefulWidget {
-  const AddressesViewBoady({super.key});
+class AddressesViewBody extends StatefulWidget {
+  const AddressesViewBody({super.key});
 
   @override
-  _AddressesViewBoadyState createState() => _AddressesViewBoadyState();
+  _AddressesViewBodyState createState() => _AddressesViewBodyState();
 }
 
-class _AddressesViewBoadyState extends State<AddressesViewBoady> {
+class _AddressesViewBodyState extends State<AddressesViewBody> {
   List<Map<String, String>> addresses = [
     {
       'homeText': 'Home',
@@ -85,7 +85,7 @@ class _AddressesViewBoadyState extends State<AddressesViewBoady> {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                child: CustomAddressItem(
+                child: AddressItem(
                   onDeleteTap: () => _deleteAddress(index),
                   onEditTap: () => _showEditAddressDialog(index),
                   addressText: address['addressText']!,
