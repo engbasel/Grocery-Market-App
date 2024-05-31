@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/CustomButton.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
+import 'package:grocerymarket/Core/widgets/CustomBackground.dart';
 import 'package:grocerymarket/Features/Addresses/widgets/AddEditAddressDialog.dart';
-import 'package:grocerymarket/Features/Addresses/widgets/CustomAddressItem.dart';
+import 'package:grocerymarket/Features/Addresses/widgets/AddressItemWidget.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
 class AddressesViewBody extends StatefulWidget {
@@ -13,7 +13,7 @@ class AddressesViewBody extends StatefulWidget {
 }
 
 class _AddressesViewBodyState extends State<AddressesViewBody> {
-  List<Map<String, String>> addresses = [
+  final List<Map<String, String>> _addresses = [
     {
       'homeText': 'Home',
       'addressText': '51/5A, Road: 7, Pallabi, Dhaka',
@@ -26,19 +26,19 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
 
   void _deleteAddress(int index) {
     setState(() {
-      addresses.removeAt(index);
+      _addresses.removeAt(index);
     });
   }
 
   void _addAddress(Map<String, String> newAddress) {
     setState(() {
-      addresses.add(newAddress);
+      _addresses.add(newAddress);
     });
   }
 
   void _editAddress(int index, Map<String, String> editedAddress) {
     setState(() {
-      addresses[index] = editedAddress;
+      _addresses[index] = editedAddress;
     });
   }
 
@@ -58,7 +58,7 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
       context: context,
       builder: (BuildContext context) {
         return AddEditAddressDialog(
-          address: addresses[index],
+          address: _addresses[index],
           onSubmit: (editedAddress) => _editAddress(index, editedAddress),
         );
       },
@@ -67,8 +67,7 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
 
     return GradientBackgroundScaffold(
       children: [
@@ -81,23 +80,15 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
           },
         ),
         const Divider(),
-        ...addresses.asMap().entries.map((entry) {
-          int index = entry.key;
-          Map<String, String> address = entry.value;
-          return Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: width * 0.03, vertical: 10),
-                child: AddressItem(
-                  onDeleteTap: () => _deleteAddress(index),
-                  onEditTap: () => _showEditAddressDialog(index),
-                  addressText: address['addressText']!,
-                  homeText: address['homeText']!,
-                ),
-              ),
-              const Divider(),
-            ],
+        ..._addresses.asMap().entries.map((entry) {
+          final index = entry.key;
+          final address = entry.value;
+          return AddressItemWidget(
+            index: index,
+            address: address,
+            onDelete: _deleteAddress,
+            onEdit: _showEditAddressDialog,
+            width: width,
           );
         }),
         Padding(
@@ -109,7 +100,7 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
             onTap: _showAddAddressDialog,
             titleButton: 'Add Address',
           ),
-        )
+        ),
       ],
     );
   }
