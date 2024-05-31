@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocerymarket/Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
 import 'package:grocerymarket/Core/widgets/CustomButton.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
 
 import '../../../Home/Widgets/CustomAppBar.dart';
 
@@ -13,7 +12,8 @@ class YourInformationView extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: GradientBackgroundScaffold(
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
           CustomAppBar(
             title: 'Your Information',
@@ -27,12 +27,9 @@ class YourInformationView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Text(
-                    'It looks like you don’t have an account with this number. Please provide some information for a secure service.',
-                    textAlign: TextAlign.center,
-                  ),
+                const Text(
+                  'It looks like you don’t have an account with this number. Please provide some information for a secure service.',
+                  textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 20),
                 CircleAvatar(
