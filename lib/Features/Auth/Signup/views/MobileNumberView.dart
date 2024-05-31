@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
 
 class MobileNumberView extends StatelessWidget {
@@ -8,7 +7,8 @@ class MobileNumberView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GradientBackgroundScaffold(
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
