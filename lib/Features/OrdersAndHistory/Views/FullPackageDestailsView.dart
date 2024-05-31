@@ -6,8 +6,8 @@ import 'package:grocerymarket/Features/OrdersAndHistory/Widgets/FullPackageDesta
 import '../../../Core/widgets/CustomButton.dart';
 import '../../Wishlist/Views/Add to Wishlist.dart';
 
-class FullPackageDestailsView extends StatelessWidget {
-  const FullPackageDestailsView({super.key});
+class FullPackageDetailsView extends StatelessWidget {
+  const FullPackageDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
