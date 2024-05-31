@@ -18,7 +18,9 @@ class PageViewOrders extends StatelessWidget {
           children: [
             CustomAppBar(
               leadingIcon: Icons.arrow_back,
-              leadingFunction: () {},
+              leadingFunction: () {
+                Navigator.pop(context);
+              },
               title: 'Order #345',
               onTap: () {},
             ),

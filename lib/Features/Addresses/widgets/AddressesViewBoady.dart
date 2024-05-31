@@ -87,8 +87,8 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
           return Column(
             children: [
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                    horizontal: width * 0.03, vertical: 10),
                 child: AddressItem(
                   onDeleteTap: () => _deleteAddress(index),
                   onEditTap: () => _showEditAddressDialog(index),

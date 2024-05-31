@@ -19,10 +19,25 @@ class MoreInfoViewBody extends StatefulWidget {
 class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
   int? _selectedIndex;
 
-  void _onItemTapped(int index) {
+  void _onItemTapped(int index, Future<void> Function() navigationCallback) {
     setState(() {
       _selectedIndex = index;
     });
+
+    navigationCallback().then((_) {
+      setState(() {
+        _selectedIndex = null;
+      });
+    });
+  }
+
+  Future<void> _navigateTo(BuildContext context, Widget destination) {
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => destination,
+      ),
+    );
   }
 
   @override
@@ -61,12 +76,8 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return const EditProfileview();
-                  },
-                ));
-                _onItemTapped(0);
+                _onItemTapped(
+                    0, () => _navigateTo(context, const EditProfileview()));
               },
               icon: FontAwesomeIcons.pen,
               label: 'Edit Profile',
@@ -76,12 +87,8 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(1);
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return const AddressesView();
-                  },
-                ));
+                _onItemTapped(
+                    1, () => _navigateTo(context, const AddressesView()));
               },
               icon: Icons.location_on_outlined,
               label: 'My address',
@@ -91,12 +98,8 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(2);
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) {
-                    return const OrdersAndHistoryView();
-                  },
-                ));
+                _onItemTapped(2,
+                    () => _navigateTo(context, const OrdersAndHistoryView()));
               },
               icon: Icons.shopping_basket_outlined,
               label: 'My Orders',
@@ -106,15 +109,8 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(3);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const WishlistViews();
-                    },
-                  ),
-                );
+                _onItemTapped(
+                    3, () => _navigateTo(context, const WishlistViews()));
               },
               icon: Icons.energy_savings_leaf,
               label: 'My Wishlist',
@@ -124,7 +120,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(4);
+                _onItemTapped(4, () async {
+                  // Implement your Chat with us navigation
+                  await Future.delayed(
+                      const Duration(seconds: 2)); // Example delay
+                });
               },
               icon: Icons.chat_bubble_outline,
               label: 'Chat with us',
@@ -134,7 +134,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(5);
+                _onItemTapped(5, () async {
+                  // Implement your Talk to our Support navigation
+                  await Future.delayed(
+                      const Duration(seconds: 2)); // Example delay
+                });
               },
               icon: Icons.call,
               label: 'Talk to our Support',
@@ -144,7 +148,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(6);
+                _onItemTapped(6, () async {
+                  // Implement your Mail to us navigation
+                  await Future.delayed(
+                      const Duration(seconds: 2)); // Example delay
+                });
               },
               icon: Icons.mail,
               label: 'Mail to us',
@@ -154,7 +162,11 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(7);
+                _onItemTapped(7, () async {
+                  // Implement your Message to facebook page navigation
+                  await Future.delayed(
+                      const Duration(seconds: 2)); // Example delay
+                });
               },
               icon: Icons.facebook,
               label: 'Message to facebook page',
@@ -164,12 +176,13 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
             const Divider(color: Color(0xfff0f0f0)),
             CustomLabelItem(
               onTap: () {
-                _onItemTapped(8);
-                Navigator.pushReplacement(context, MaterialPageRoute(
-                  builder: (context) {
-                    return const LoginView();
-                  },
-                ));
+                _onItemTapped(
+                    8,
+                    () => Navigator.pushReplacement(context, MaterialPageRoute(
+                          builder: (context) {
+                            return const LoginView();
+                          },
+                        )));
               },
               icon: Icons.power_settings_new,
               label: 'Log out',
