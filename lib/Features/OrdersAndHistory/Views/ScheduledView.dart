@@ -29,11 +29,11 @@ class ScheduledView extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: CustomNavigationButton(
+              child: CustomButton(
                 height: 50,
                 width: 350,
-                textColors: Colors.green,
-                color: const Color(0xffe2f3ec),
+                textColor: Colors.green,
+                buttonColor: const Color(0xffe2f3ec),
                 text: 'Show Delivery Details',
                 onTap: () {},
               ),
@@ -41,11 +41,11 @@ class ScheduledView extends StatelessWidget {
             const SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: CustomNavigationButton(
+              child: CustomButton(
                 height: 50,
                 width: 350,
-                color: const Color(0xffe2f3ec),
-                textColors: Colors.red,
+                textColor: const Color(0xffe2f3ec),
+                buttonColor: Colors.red,
                 text: 'Show Delivery Details',
                 onTap: () {},
               ),
@@ -133,22 +133,22 @@ class ScheduledView extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: CustomNavigationButton(
+              child: CustomButton(
                 height: 50,
                 width: 350,
-                textColors: Colors.white,
-                color: const Color(0xfff37a20),
+                textColor: Colors.white,
+                buttonColor: const Color(0xfff37a20),
                 text: 'Contact with Support',
                 onTap: () {},
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: CustomNavigationButton(
+              child: CustomButton(
                 height: 50,
                 width: 350,
-                textColors: const Color(0xffff5552),
-                color: Colors.white,
+                textColor: const Color(0xffff5552),
+                buttonColor: Colors.white,
                 text: 'Cancel Order',
                 onTap: () {},
               ),

@@ -1,22 +1,73 @@
+// import 'package:flutter/material.dart';
+
+// class CustomNavigationButton extends StatelessWidget {
+//   final Color? color;
+//   final Color? textColors;
+//   final Widget? child;
+//   final String text;
+//   final VoidCallback onTap;
+//   double? width, height;
+
+//   CustomNavigationButton({
+//     super.key,
+//     this.color,
+//     this.textColors,
+//     this.child,
+//     required this.text,
+//     required this.onTap,
+//     this.height,
+//     this.width,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector(
+//       onTap: onTap,
+//       child: Container(
+//         width: width,
+//         height: height,
+//         decoration: color != null
+//             ? BoxDecoration(
+//                 color: color,
+//                 borderRadius: BorderRadius.circular(10),
+//               )
+//             : BoxDecoration(
+//                 borderRadius: BorderRadius.circular(10),
+//               ),
+//         child: Center(
+//           child: child ??
+//               Text(
+//                 text,
+//                 style: TextStyle(
+//                   color: textColors ?? Colors.black,
+//                 ),
+//               ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 import 'package:flutter/material.dart';
 
-class CustomNavigationButton extends StatelessWidget {
-  final Color? color;
-  final Color? textColors;
+class CustomButton extends StatelessWidget {
+  final Color? buttonColor;
+  final Color? textColor;
   final Widget? child;
   final String text;
   final VoidCallback onTap;
-  double? width, height;
+  final double? width;
+  final double? height;
 
-  CustomNavigationButton({
+  const CustomButton({
     super.key,
-    this.color,
-    this.textColors,
+    this.buttonColor,
+    this.textColor,
     this.child,
     required this.text,
     required this.onTap,
-    this.height,
     this.width,
+    this.height,
   });
 
   @override
@@ -26,20 +77,16 @@ class CustomNavigationButton extends StatelessWidget {
       child: Container(
         width: width,
         height: height,
-        decoration: color != null
-            ? BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(10),
-              )
-            : BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
+        decoration: BoxDecoration(
+          color: buttonColor,
+          borderRadius: BorderRadius.circular(10),
+        ),
         child: Center(
           child: child ??
               Text(
                 text,
                 style: TextStyle(
-                  color: textColors ?? Colors.black,
+                  color: textColor ?? Colors.black,
                 ),
               ),
         ),
