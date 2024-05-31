@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
-
 import '../../../Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
 import '../../../Core/widgets/CoustomTextFormFildes/PasswordField.dart';
 import '../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
@@ -14,56 +12,67 @@ class EditProfileview extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
 
-    return SafeArea(
-      child: GradientBackgroundScaffold(
-        children: [
-          CustomAppBar(
-            leadingIcon: Icons.arrow_back,
-            leadingFunction: () {
-              Navigator.pop(context);
-            },
-            title: 'Edit Profile',
-            onTap: () {},
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF0072B8), Color(0xFF00B4DB)],
           ),
-          SizedBox(height: width * 0.1),
-
-          const CircleAvatar(
-            radius: 80,
-            backgroundImage: AssetImage('assets/MoreInformation/Oval.png'),
-          ),
-          SizedBox(height: width * 0.1),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: PhoneNumberField(),
-          ),
-          SizedBox(height: width * 0.02),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: PasswordField(),
-          ),
-          SizedBox(height: width * 0.02),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-            child: customTextFormField(
-              hintText: 'Full Name',
-              labelText: 'Full Name',
-              prefixIcon: Icons.person,
+        ),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CustomAppBar(
+                  leadingIcon: Icons.arrow_back,
+                  leadingFunction: () {
+                    Navigator.pop(context);
+                  },
+                  title: 'Edit Profile',
+                  onTap: () {},
+                ),
+                SizedBox(height: width * 0.1),
+                const CircleAvatar(
+                  radius: 80,
+                  backgroundImage:
+                      AssetImage('assets/MoreInformation/Oval.png'),
+                ),
+                SizedBox(height: width * 0.1),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: PhoneNumberField(),
+                ),
+                SizedBox(height: width * 0.02),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: PasswordField(),
+                ),
+                SizedBox(height: width * 0.02),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  child: customTextFormField(
+                    hintText: 'Full Name',
+                    labelText: 'Full Name',
+                    prefixIcon: Icons.person,
+                  ),
+                ),
+                SizedBox(height: height * 0.1),
+                CustomButton(
+                  width: width * 0.85,
+                  height: 50,
+                  text: 'Save',
+                  icon: Icons.save,
+                  onTap: () {
+                    print('Button tapped!');
+                  },
+                ),
+                SizedBox(height: height * 0.1),
+              ],
             ),
           ),
-          SizedBox(height: height * 0.1),
-          CustomButton(
-            width: width * 0.85,
-            height: 50,
-            text: 'Save',
-            icon: Icons.save,
-            onTap: () {
-              print('Button tapped!');
-            },
-          ),
-          SizedBox(height: height * 0.1),
-
-          // const SizedBox(height: 25),
-        ],
+        ),
       ),
     );
   }
