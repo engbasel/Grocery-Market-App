@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Core/widgets/CustomButton.dart';
-import 'package:grocerymarket/Core/widgets/CustomBackground.dart';
 import 'package:grocerymarket/Features/Addresses/widgets/AddEditAddressDialog.dart';
 import 'package:grocerymarket/Features/Addresses/widgets/AddressItemWidget.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
@@ -69,39 +68,41 @@ class _AddressesViewBodyState extends State<AddressesViewBody> {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
 
-    return GradientBackgroundScaffold(
-      children: [
-        CustomAppBar(
-          title: 'My Addresses',
-          onTap: () {},
-          leadingIcon: Icons.arrow_back,
-          leadingFunction: () {
-            Navigator.pop(context);
-          },
-        ),
-        const Divider(),
-        ..._addresses.asMap().entries.map((entry) {
-          final index = entry.key;
-          final address = entry.value;
-          return AddressItemWidget(
-            index: index,
-            address: address,
-            onDelete: _deleteAddress,
-            onEdit: _showEditAddressDialog,
-            width: width,
-          );
-        }),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-          child: CustomButton(
-            widthAtFirstOfButton: width * 0.33,
-            height: 55,
-            color: 0xFF87DD39,
-            onTap: _showAddAddressDialog,
-            titleButton: 'Add Address',
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: 'My Addresses',
+        onTap: () {},
+        leadingIcon: Icons.arrow_back,
+        leadingFunction: () {
+          Navigator.pop(context);
+        },
+      ),
+      body: Column(
+        children: [
+          const Divider(),
+          ..._addresses.asMap().entries.map((entry) {
+            final index = entry.key;
+            final address = entry.value;
+            return AddressItemWidget(
+              index: index,
+              address: address,
+              onDelete: _deleteAddress,
+              onEdit: _showEditAddressDialog,
+              width: width,
+            );
+          }),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+            child: CustomButton(
+              widthAtFirstOfButton: width * 0.33,
+              height: 55,
+              color: 0xFF87DD39,
+              onTap: _showAddAddressDialog,
+              titleButton: 'Add Address',
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
