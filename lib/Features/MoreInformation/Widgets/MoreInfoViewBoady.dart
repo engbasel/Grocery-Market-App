@@ -46,15 +46,8 @@ class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
         title: 'More',
         onTap: () {},
       ),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFF0072B8), Color(0xFF00B4DB)],
-          ),
-        ),
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
