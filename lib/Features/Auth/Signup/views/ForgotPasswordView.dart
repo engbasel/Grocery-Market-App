@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
-import '../../../../Core/widgets/customBackground.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -9,7 +8,8 @@ class ForgotPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GradientBackgroundScaffold(
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         children: [
           CustomAppBar(
             title: 'Forget password',
