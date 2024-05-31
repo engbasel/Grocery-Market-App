@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocerymarket/Features/OrdersAndHistory/Views/FullPackageDestailsView.dart';
 
 import '../Widgets/CustomCurrentLocationCard.dart';
 import '../Widgets/CustomNavigationButton.dart';
@@ -46,8 +47,14 @@ class WeareonthewayView extends StatelessWidget {
                 width: 350,
                 color: const Color(0xffe2f3ec),
                 textColors: Colors.red,
-                text: 'Show Delivery Details',
-                onTap: () {},
+                text: 'Show Full Package',
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const FullPackageDestailsView();
+                    },
+                  ));
+                },
               ),
             ),
             const Padding(
