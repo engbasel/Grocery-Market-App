@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocerymarket/Core/widgets/customBackground.dart';
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
 import '../../../Core/utils/Lists.dart';
@@ -10,8 +9,8 @@ class CategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GradientBackgroundScaffold(
+    return Scaffold(
+      body: ListView(
         children: [
           const SizedBox(height: 20), // Add some spacing from the top
           CustomAppBar(
