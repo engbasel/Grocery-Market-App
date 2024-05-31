@@ -13,35 +13,32 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GradientBackgroundScaffold(
-        children: [
-          const SizedBox(height: 20), // Add some spacing from the top
-          CustomAppBar(
-            horizontalPadding: 20,
-            title: 'Grocery Plus',
-            icon: FontAwesomeIcons.bell,
-            onTap: () {
-              Navigator.push(
-                  context,
-                  DialogRoute(
-                    context: context,
-                    builder: (context) {
-                      return const NotificationView();
-                    },
-                  ));
-              print('IconButton tapped');
-            },
-          ),
-          const SizedBox(height: 10), // Add some spacing from the top
-          const CurrentLocation(),
-          const CustomSearchBar(), // Ensure you instantiate CustomSearchBar
-          // Expanded(child: ListViewHome()),
-          CustomGridView(items: homeItems),
+    return GradientBackgroundScaffold(
+      children: [
+        // const SizedBox(height: 20), // Add some spacing from the top
+        CustomAppBar(
+          horizontalPadding: 20,
+          title: 'Grocery Plus',
+          icon: FontAwesomeIcons.bell,
+          onTap: () {
+            Navigator.push(
+                context,
+                DialogRoute(
+                  context: context,
+                  builder: (context) {
+                    return const NotificationView();
+                  },
+                ));
+          },
+        ),
+        const SizedBox(height: 10), // Add some spacing from the top
+        const CurrentLocation(),
+        const CustomSearchBar(), // Ensure you instantiate CustomSearchBar
+        // Expanded(child: ListViewHome()),
+        CustomGridView(items: homeItems),
 
-          // Add some spacing from the top
-        ],
-      ),
+        // Add some spacing from the top
+      ],
     );
   }
 }
