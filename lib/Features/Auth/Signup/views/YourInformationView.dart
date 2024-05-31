@@ -11,6 +11,7 @@ class YourInformationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.height;
     return Scaffold(
       body: GradientBackgroundScaffold(
         children: [
@@ -43,14 +44,14 @@ class YourInformationView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Padding(
-                  padding: EdgeInsets.symmetric(
+                Padding(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 15,
                     vertical: 5,
                   ),
                   child: CustomButton(
                     widthBetweenItems: 50,
-                    widthAtFirstOfButton: 150,
+                    widthAtFirstOfButton: width * 0.1,
                     height: 50,
                     color: 0xff236cd9,
                     titleButton: 'Sync From Facebook',
