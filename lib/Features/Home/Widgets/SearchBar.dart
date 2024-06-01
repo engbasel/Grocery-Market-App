@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:grocerymarket/Features/Search/Views/Search.dart';
+import 'package:grocerymarket/Features/Search/Views/SearchView.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({super.key});
