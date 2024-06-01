@@ -160,6 +160,19 @@ class _SearchViewBodyState extends State<SearchViewBody> {
   }
 
   Widget _buildProductList(List<Map<String, dynamic>> products) {
+    if (products.isEmpty) {
+      return const Center(
+        child: Text(
+          "Oops! We can’t find your product! But you can add it to wishlist",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      );
+    }
+
     return Expanded(
       child: ListView.builder(
         itemCount: products.length,
