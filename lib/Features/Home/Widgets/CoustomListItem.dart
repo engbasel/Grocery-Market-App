@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomListItem extends StatelessWidget {
   final String imagePath;
-  final String ScreenName;
+  final String View;
   final String textData;
   void Function()? onTap;
 
@@ -10,7 +11,7 @@ class CustomListItem extends StatelessWidget {
   CustomListItem({
     super.key,
     required this.imagePath,
-    required this.ScreenName,
+    required this.View,
     required this.textData,
     this.onTap,
   });
@@ -19,7 +20,7 @@ class CustomListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, ScreenName);
+        Navigator.pushNamed(context, View);
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),

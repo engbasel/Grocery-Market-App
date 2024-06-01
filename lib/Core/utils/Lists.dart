@@ -3,61 +3,61 @@ import '../../Features/Snacks/Widgets/CoustomCardSnacks.dart';
 
 final List<CustomListItem> homeItems = [
   CustomListItem(
-      ScreenName: '',
+      View: '',
       imagePath: 'assets/Home/Fruits&Vegetables.png',
       textData: 'Fruits & Vegetables'),
   CustomListItem(
     imagePath: 'assets/Home/Breakfast.png',
     textData: 'Breakfast',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Home/Beverages.png',
     textData: 'Beverages',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Home/Meat&Fish.png',
     textData: 'Meat & Fish',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Home/Snacks.png',
     textData: 'Snacks',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Home/Milk.png',
     textData: 'Dairy',
-    ScreenName: '',
+    View: '',
   ),
 ];
 
 final List<CustomListItem> categoryItems = [
   CustomListItem(
-      ScreenName: '',
+      View: '',
       onTap: () {},
       imagePath: 'assets/Category/image 2-3.png',
       textData: 'Fruits & Vegetables'),
   CustomListItem(
     imagePath: 'assets/Category/Fruits&Vegetables.png',
     textData: 'Breakfast',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Category/Dairy.png',
     textData: 'Breakfast',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Category/Meat&Fish.png',
     textData: 'Meat & Fish',
-    ScreenName: '',
+    View: '',
   ),
   CustomListItem(
     imagePath: 'assets/Category/Snacks.png',
     textData: 'Snacks',
-    ScreenName: 'SnacksView',
+    View: 'SnacksView',
     onTap: () {
       print('snakes');
     },
@@ -65,7 +65,7 @@ final List<CustomListItem> categoryItems = [
   CustomListItem(
     imagePath: 'assets/Category/Breakfast.png',
     textData: 'Dairy',
-    ScreenName: '',
+    View: '',
   ),
 ];
 

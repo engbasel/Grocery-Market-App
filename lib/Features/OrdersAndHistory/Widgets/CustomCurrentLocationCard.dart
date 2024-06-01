@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/Payment/Views/Payment%20MethodView.dart';
 
+// ignore: must_be_immutable
 class CustomCurrentLocationCard extends StatelessWidget {
   String textOne, textTwo;
 
