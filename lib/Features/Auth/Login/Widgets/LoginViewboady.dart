@@ -27,14 +27,14 @@ class LoginViewBody extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 10),
-                      const Text(
-                        'WELCOME BACK!',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 24,
-                        ),
-                      ),
+                      const SizedBox(height: 25),
+                      // const Text(
+                      //   'WELCOME BACK!',
+                      //   style: TextStyle(
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 24,
+                      //   ),
+                      // ),
                       const SizedBox(height: 25),
                       SvgPicture.asset(
                         'assets/Auth/login.svg',
