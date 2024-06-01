@@ -25,7 +25,14 @@ class FullPackageDetailsView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 50),
             child: Row(
               children: [
-                Text('Products'),
+                Text(
+                  'Products',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           ),
