@@ -121,9 +121,12 @@ class ScheduledView extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 10),
-              child: CustomCurrentLocationCard(),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: CustomCurrentLocationCard(
+                textOne: '',
+                textTwo: '',
+              ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),

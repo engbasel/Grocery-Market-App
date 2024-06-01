@@ -21,7 +21,6 @@ class MyBagView extends StatelessWidget {
           children: [
             const SizedBox(height: 20),
             const SectionTitle(title: 'Product'),
-
             const FullPackageDestailsProductItem(),
             const FullPackageDestailsProductItem(),
             CustomButton(
@@ -32,16 +31,7 @@ class MyBagView extends StatelessWidget {
               width: 250,
               height: 50,
             ),
-            // const Padding(
-            //   padding: EdgeInsets.symmetric(horizontal: 10),
-            //   child: Row(
-            //     children: [
-            //       Text('Expected Date & TIme'),
-            //     ],
-            //   ),
-            // ),
             const SizedBox(height: 20),
-
             const SectionTitle(title: 'Delivery Location'),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -51,10 +41,13 @@ class MyBagView extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: OrderSummary(),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              child: CustomCurrentLocationCard(),
-            ),
+            Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                child: CustomCurrentLocationCard(
+                  textTwo: 'Tap Here to select your',
+                  textOne: 'Payment Method ',
+                )),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: CustomButton(

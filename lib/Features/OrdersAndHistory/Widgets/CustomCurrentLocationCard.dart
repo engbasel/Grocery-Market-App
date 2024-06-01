@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:grocerymarket/Features/Payment/Views/Payment%20MethodView.dart';
 
 class CustomCurrentLocationCard extends StatelessWidget {
-  const CustomCurrentLocationCard({super.key});
+  String textOne, textTwo;
+
+  CustomCurrentLocationCard({
+    super.key,
+    required this.textOne,
+    required this.textTwo,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -30,16 +36,16 @@ class CustomCurrentLocationCard extends StatelessWidget {
                 ),
               ),
               const Spacer(),
-              const Column(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'You selected',
-                    style: TextStyle(
+                    textOne,
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text('Cash on Delivery'),
+                  Text(textTwo),
                 ],
               ),
               const Spacer(),

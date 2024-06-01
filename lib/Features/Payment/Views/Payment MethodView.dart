@@ -1,15 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
 class PaymentMethodView extends StatelessWidget {
   const PaymentMethodView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
-          child: Column(
-        children: [],
-      )),
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: 'Payment Method',
+        onTap: () {},
+      ),
+      body: const SafeArea(
+        child: Column(
+          children: [
+            PaymentMethodItem(
+              iconRow: FaIcon(FontAwesomeIcons.creditCard),
+              textCard: 'Credit / Debit Card',
+            ),
+            PaymentMethodItem(
+              iconRow: FaIcon(FontAwesomeIcons.moneyBill),
+              textCard: 'Bkash Online Payment',
+            ),
+            PaymentMethodItem(
+              iconRow: FaIcon(FontAwesomeIcons.paypal),
+              textCard: 'Cash on Delivery',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class PaymentMethodItem extends StatelessWidget {
+  final String textCard;
+  final FaIcon iconRow;
+
+  const PaymentMethodItem({
+    super.key,
+    required this.textCard,
+    required this.iconRow,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Row(
+        children: [
+          IconButton(
+            onPressed: () {
+              // Add your onPressed functionality here
+            },
+            icon: iconRow,
+          ),
+          Text(textCard),
+        ],
+      ),
     );
   }
 }
