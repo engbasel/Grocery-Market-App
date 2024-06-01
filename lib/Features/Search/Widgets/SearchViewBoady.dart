@@ -10,31 +10,37 @@ class SearchViewBody extends StatefulWidget {
 
 class _SearchViewBodyState extends State<SearchViewBody> {
   String _searchText = '';
+  String? _selectedFilter;
   final List<Map<String, dynamic>> _products = [
     {
       'name': 'Arla DANO Full Cream Milk Powder Instant',
+      'brand': 'DANO',
       'oldPrice': 200,
       'newPrice': 182,
-      'image': 'assets/ProductDetails/Nido.png',
+      'image': 'assets/ProductDetails/Milkimage.png',
       'discount': '20% OFF',
     },
     {
       'name': 'Nestle Nido Full Cream Milk Powder Instant',
+      'brand': 'Nestle',
       'oldPrice': 342,
       'newPrice': 270,
-      'image': 'assets/ProductDetails/Milkimage.png',
+      'image': 'assets/ProductDetails/Nido.png',
     },
     {
       'name': 'Nestle Nido Full Cream Milk Powder Instant',
+      'brand': 'Nestle',
       'oldPrice': 342,
       'newPrice': 270,
-      'image': 'assets/ProductDetails/Milkimage.png',
+      'image': 'assets/ProductDetails/Nido.png',
     },
     {
-      'name': 'Nestle Nido Full Cream Milk Powder Instant',
+      'name':
+          'dvertising some mens products exclusively in mens magazines or using other advertising vehicles that target men',
+      'brand': 'Arong',
       'oldPrice': 342,
       'newPrice': 270,
-      'image': 'assets/ProductDetails/Milkimage.png',
+      'image': 'assets/ProductDetails/Nido.png',
     },
     // Add more products as needed
   ];
@@ -47,6 +53,13 @@ class _SearchViewBodyState extends State<SearchViewBody> {
             .toLowerCase()
             .contains(_searchText.toLowerCase()))
         .toList();
+
+    if (_selectedFilter != null) {
+      filteredProducts = filteredProducts
+          .where((product) =>
+              product['brand'].toString().toLowerCase() == _selectedFilter)
+          .toList();
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -96,6 +109,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
               onChanged: (value) {
                 setState(() {
                   _searchText = value;
+                  _selectedFilter = null; // Reset selected filter on new search
                 });
               },
               decoration: InputDecoration(
@@ -130,8 +144,13 @@ class _SearchViewBodyState extends State<SearchViewBody> {
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: FilterChip(
                     label: Text(filter),
+                    selected: _selectedFilter == filter.toLowerCase(),
+                    selectedColor: Colors.orange,
                     onSelected: (bool selected) {
-                      // Handle filter selection
+                      setState(() {
+                        _selectedFilter =
+                            selected ? filter.toLowerCase() : null;
+                      });
                     },
                   ),
                 ))
