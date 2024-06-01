@@ -18,6 +18,8 @@ class CustomListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return GestureDetector(
       onTap: () {
         Navigator.pushNamed(context, View);
@@ -37,8 +39,10 @@ class CustomListItem extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                   child: Image.asset(
+                    width: width * 0.2,
+                    height: height * 0.15,
                     imagePath,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.fill,
                   ),
                 ), // Use the imagePath parameter
                 Text(textData), // Use the textData parameter
