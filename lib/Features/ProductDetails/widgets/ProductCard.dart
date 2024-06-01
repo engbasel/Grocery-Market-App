@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 class ProductCardWidget extends StatelessWidget {
   final VoidCallback? onTap;
+  final VoidCallback? onLongPress;
 
   const ProductCardWidget({
     super.key,
     this.onTap,
+    this.onLongPress,
   });
 
   @override
@@ -13,6 +15,7 @@ class ProductCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: GestureDetector(
+        onDoubleTapCancel: onLongPress,
         onTap: onTap,
         child: Row(
           children: [

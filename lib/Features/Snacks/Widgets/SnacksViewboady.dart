@@ -10,17 +10,19 @@ class SnacksViewboady extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        horizontalPadding: 0,
+        verticalPadding: 0,
+        leadingFunction: () {
+          Navigator.pop(context);
+        },
+        title: 'Snacks',
+        leadingIcon: Icons.arrow_back,
+        onTap: () {},
+      ),
       body: SafeArea(
         child: Column(
           children: [
-            CustomAppBar(
-              horizontalPadding: 0,
-              verticalPadding: 0,
-              leadingFunction: () {},
-              title: 'Snacks',
-              leadingIcon: Icons.arrow_back,
-              onTap: () {},
-            ),
             Expanded(
               child: CustomGridView(items: snackItems),
             ),

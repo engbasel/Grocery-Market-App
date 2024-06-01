@@ -11,8 +11,9 @@ class CustomButton extends StatelessWidget {
   final String? titleButton;
   final IconData? iconButtonAtEnd;
   final IconData? iconButtonAtFirst;
+  Color? TextColor;
 
-  const CustomButton({
+  CustomButton({
     super.key,
     required this.color,
     this.height,
@@ -24,6 +25,7 @@ class CustomButton extends StatelessWidget {
     this.iconButtonAtEnd,
     this.iconButtonAtFirst,
     this.widthAtFirstOfButton,
+    this.TextColor,
   });
 
   @override
@@ -50,8 +52,8 @@ class CustomButton extends StatelessWidget {
               SizedBox(width: widthInFirstOfContainer ?? 0),
               Text(
                 titleButton ?? '',
-                style: const TextStyle(
-                  color: Colors.white,
+                style: TextStyle(
+                  color: TextColor,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),

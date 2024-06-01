@@ -10,19 +10,21 @@ class ProductDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        horizontalPadding: 0,
+        verticalPadding: 0,
+        title: "Product Details",
+        onTap: () {},
+        leadingFunction: () {
+          Navigator.pop(context);
+        },
+        leadingIcon: Icons.arrow_back_ios,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomAppBar(
-                horizontalPadding: 0,
-                verticalPadding: 0,
-                title: "Product Details",
-                onTap: () {},
-                leadingFunction: () {},
-                leadingIcon: Icons.arrow_back_ios,
-              ),
               const SizedBox(height: 10),
               GestureDetector(
                 onTap: () {

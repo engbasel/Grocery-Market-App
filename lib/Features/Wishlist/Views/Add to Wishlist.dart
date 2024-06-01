@@ -68,7 +68,7 @@ class AddToWishlistBody extends StatelessWidget {
             SizedBox(
               height: height * 0.1,
             ),
-            const CustomButton(
+            CustomButton(
               iconButtonAtEnd: Icons.save,
               color: 0xff5ec401,
               height: 50,
