@@ -15,8 +15,20 @@ class _SearchViewBodyState extends State<SearchViewBody> {
       'name': 'Arla DANO Full Cream Milk Powder Instant',
       'oldPrice': 200,
       'newPrice': 182,
-      'image': 'assets/ProductDetails/Milkimage.png',
+      'image': 'assets/ProductDetails/Nido.png',
       'discount': '20% OFF',
+    },
+    {
+      'name': 'Nestle Nido Full Cream Milk Powder Instant',
+      'oldPrice': 342,
+      'newPrice': 270,
+      'image': 'assets/ProductDetails/Milkimage.png',
+    },
+    {
+      'name': 'Nestle Nido Full Cream Milk Powder Instant',
+      'oldPrice': 342,
+      'newPrice': 270,
+      'image': 'assets/ProductDetails/Milkimage.png',
     },
     {
       'name': 'Nestle Nido Full Cream Milk Powder Instant',
