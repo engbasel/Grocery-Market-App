@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:grocerymarket/Features/Payment/Views/Payment%20MethodView.dart';
 
 class CustomCurrentLocationCard extends StatelessWidget {
   const CustomCurrentLocationCard({super.key});
@@ -32,13 +33,27 @@ class CustomCurrentLocationCard extends StatelessWidget {
               const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Text(
+                    'You selected',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   Text('Cash on Delivery'),
-                  Text('You selected'),
                 ],
               ),
               const Spacer(),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const PaymentMethodView();
+                      },
+                    ),
+                  );
+                },
                 icon: const Icon(
                   Icons.arrow_forward_ios_rounded,
                 ),
