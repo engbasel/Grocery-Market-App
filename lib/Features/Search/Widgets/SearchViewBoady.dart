@@ -170,7 +170,7 @@ class _SearchViewBodyState extends State<SearchViewBody> {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16.0,
-                // fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ],
