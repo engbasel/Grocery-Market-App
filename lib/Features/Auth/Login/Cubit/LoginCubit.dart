@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:grocerymarket/Features/Auth/Cubit/LoginStates.dart';
+import 'package:grocerymarket/Features/Auth/Login/Cubit/LoginStates.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginCubit extends Cubit<LoginState> {

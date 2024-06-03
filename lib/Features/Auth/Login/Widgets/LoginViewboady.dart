@@ -6,8 +6,8 @@ import '../../../../Core/widgets/CoustomButtonNavigaionBar.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PasswordField.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/customTextFormField.dart';
 import '../../../../Core/widgets/CustomButton.dart';
-import '../../Cubit/LoginCubit.dart';
-import '../../Cubit/LoginStates.dart';
+import '../Cubit/LoginCubit.dart';
+import '../Cubit/LoginStates.dart';
 import '../../Signup/views/signupView.dart';
 
 class LoginViewBody extends StatelessWidget {
