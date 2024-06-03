@@ -35,11 +35,11 @@ import 'package:grocerymarket/Features/Auth/Login/Widgets/LoginViewboady.dart';
 import 'Features/Auth/Cubit/LoginStates.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const GroceryApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GroceryApp extends StatelessWidget {
+  const GroceryApp({super.key});
 
   @override
   Widget build(BuildContext context) {
