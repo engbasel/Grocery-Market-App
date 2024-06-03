@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
+import '../../../../Core/widgets/CustomButton.dart';
 
 class MobileNumberView extends StatelessWidget {
   final VoidCallback onTapNext;
@@ -9,6 +11,8 @@ class MobileNumberView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -33,14 +37,27 @@ class MobileNumberView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: PhoneNumberField(),
           ),
-          ElevatedButton(
-            onPressed: () {
+          SizedBox(
+            height: height * 0.1,
+          ),
+          CustomButton(
+            TextColor: Colors.white,
+            width: width * 0.5,
+            widthBetweenItems: width * 0.1,
+            widthAtFirstOfButton: width * 0.1,
+            height: 50,
+            color: 0xff5ec401,
+            titleButton: 'Next',
+            iconButtonAtEnd: FontAwesomeIcons.arrowRight,
+            onTap: () {
               pageController.nextPage(
                 duration: const Duration(milliseconds: 500),
                 curve: Curves.ease,
               );
             },
-            child: const Text('Next'),
+          ),
+          SizedBox(
+            height: height * 0.1,
           ),
         ],
       ),

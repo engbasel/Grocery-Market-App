@@ -14,7 +14,8 @@ class YourInformationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.height;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -67,14 +68,27 @@ class YourInformationView extends StatelessWidget {
                     hintText: 'Full name',
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
+                SizedBox(
+                  height: height * 0.1,
+                ),
+                CustomButton(
+                  TextColor: Colors.white,
+                  width: width * 0.5,
+                  widthBetweenItems: width * 0.1,
+                  widthAtFirstOfButton: width * 0.1,
+                  height: 50,
+                  color: 0xff5ec401,
+                  titleButton: 'Next',
+                  iconButtonAtEnd: FontAwesomeIcons.arrowRight,
+                  onTap: () {
                     pageController.nextPage(
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.ease,
                     );
                   },
-                  child: const Text('Next'),
+                ),
+                SizedBox(
+                  height: height * 0.1,
                 ),
               ],
             ),
