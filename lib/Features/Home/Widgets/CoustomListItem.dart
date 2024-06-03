@@ -28,16 +28,20 @@ class CustomListItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Container(
+            width: width * 0.4,
+            height: height * 0.25,
             decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //   SizedBox(height: 5),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 0.05, horizontal: 0.05),
                   child: Image.asset(
                     width: width * 0.2,
                     height: height * 0.15,
