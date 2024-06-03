@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
 
 class EnterVerificationCodeView extends StatelessWidget {
-  const EnterVerificationCodeView({super.key});
+  final VoidCallback onTapNext;
+  final PageController pageController;
+  const EnterVerificationCodeView(
+      {super.key, required this.onTapNext, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +45,20 @@ class EnterVerificationCodeView extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: PhoneNumberField(),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              // pageController.nextPage(
+              //   duration: const Duration(milliseconds: 500),
+              //   curve: Curves.ease,
+              // );
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const SplashScreenView();
+                },
+              ));
+            },
+            child: const Text('Go To Login '),
           ),
         ],
       ),

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
 
 class MobileNumberView extends StatelessWidget {
-  const MobileNumberView({super.key});
+  final VoidCallback onTapNext;
+  final PageController pageController;
+  const MobileNumberView(
+      {super.key, required this.onTapNext, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +32,15 @@ class MobileNumberView extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: PhoneNumberField(),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              pageController.nextPage(
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.ease,
+              );
+            },
+            child: const Text('Next'),
           ),
         ],
       ),

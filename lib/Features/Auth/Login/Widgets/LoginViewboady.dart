@@ -90,7 +90,7 @@ class LoginViewBody extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const SignupView(),
+                                      builder: (context) => SignupView(),
                                     ),
                                   );
                                 },

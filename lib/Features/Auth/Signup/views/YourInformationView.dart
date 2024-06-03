@@ -6,7 +6,11 @@ import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import '../../../Home/Widgets/CustomAppBar.dart';
 
 class YourInformationView extends StatelessWidget {
-  const YourInformationView({super.key});
+  final VoidCallback onTapNext;
+  final PageController pageController;
+
+  const YourInformationView(
+      {super.key, required this.onTapNext, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +66,15 @@ class YourInformationView extends StatelessWidget {
                     labelText: 'Full name',
                     hintText: 'Full name',
                   ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    pageController.nextPage(
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.ease,
+                    );
+                  },
+                  child: const Text('Next'),
                 ),
               ],
             ),

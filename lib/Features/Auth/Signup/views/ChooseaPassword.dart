@@ -3,7 +3,11 @@ import 'package:grocerymarket/Core/widgets/CoustomTextFormFildes/PasswordField.d
 import 'package:grocerymarket/Features/Home/Widgets/CustomAppBar.dart';
 
 class ChoosePasswordView extends StatelessWidget {
-  const ChoosePasswordView({super.key});
+  final VoidCallback onTapNext;
+  final PageController pageController;
+
+  const ChoosePasswordView(
+      {super.key, required this.onTapNext, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +36,15 @@ class ChoosePasswordView extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: PasswordField(),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              pageController.nextPage(
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.ease,
+              );
+            },
+            child: const Text('Next'),
           ),
         ],
       ),
