@@ -7,6 +7,8 @@ import 'package:grocerymarket/Core/widgets/CoustomTextFormFildes/customTextFormF
 import 'package:grocerymarket/Core/widgets/CustomButton.dart';
 import 'package:grocerymarket/Features/Auth/Signup/views/signupView.dart';
 
+import '../../../../Core/utils/constins.dart';
+
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
 
@@ -29,8 +31,8 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   Future<void> _loadUserCredentials() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      savedEmail = prefs.getString('email') ?? 'Basel Ahmed';
-      savedPassword = prefs.getString('password') ?? 'password';
+      savedEmail = prefs.getString('email') ?? UserNameSharedPreferences;
+      savedPassword = prefs.getString('password') ?? PasswordSharedPreferences;
     } catch (error, stackTrace) {
       print('Error loading user credentials: $error');
       print(stackTrace);
