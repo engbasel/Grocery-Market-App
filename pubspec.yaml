@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
   image_picker: ^1.1.1
+  shared_preferences: ^2.2.3
   smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
@@ -65,7 +66,6 @@ flutter:
     - assets/OrdersAndHistory/
     - assets/Category/
     - assets/Search/
-    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
