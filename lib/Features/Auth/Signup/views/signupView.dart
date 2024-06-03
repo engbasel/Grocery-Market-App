@@ -20,11 +20,10 @@ class SignupView extends StatelessWidget {
             child: PageView(
               controller: pageController,
               children: const [
-                MobileNumberView(),
-                ChoosePasswordView(),
-                EnterVerificationCodeView(),
-                ChoosePasswordView(),
                 YourInformationView(),
+                ChoosePasswordView(),
+                MobileNumberView(),
+                EnterVerificationCodeView(),
               ],
             ),
           ),
@@ -32,7 +31,7 @@ class SignupView extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: SmoothPageIndicator(
               controller: pageController, // PageController
-              count: 5,
+              count: 4,
               effect: const WormEffect(
                 dotHeight: 12.0,
                 dotWidth: 12.0,
@@ -40,11 +39,6 @@ class SignupView extends StatelessWidget {
                 dotColor: Colors.grey,
                 activeDotColor: Colors.green,
               ),
-              // effect: const WormEffect(
-              //   dotColor: Color(0xffF37A20),
-              //   activeDotColor: Color(0xff455a64),
-              // ),
-              // Change the effect as needed
             ),
           ),
         ],
