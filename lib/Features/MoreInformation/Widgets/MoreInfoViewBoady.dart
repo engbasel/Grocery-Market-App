@@ -8,14 +8,15 @@ import 'package:grocerymarket/Features/Profile/views/EditProfileview.dart';
 import 'package:grocerymarket/Features/Wishlist/Views/WishlistViews.dart';
 import '../../Home/Widgets/CustomAppBar.dart';
 
-class MoreInfoViewBody extends StatefulWidget {
-  const MoreInfoViewBody({super.key});
+class MoreInfoViewBodyDesktop extends StatefulWidget {
+  const MoreInfoViewBodyDesktop({super.key});
 
   @override
-  _MoreInfoViewBodyState createState() => _MoreInfoViewBodyState();
+  _MoreInfoViewBodyDesktopState createState() =>
+      _MoreInfoViewBodyDesktopState();
 }
 
-class _MoreInfoViewBodyState extends State<MoreInfoViewBody> {
+class _MoreInfoViewBodyDesktopState extends State<MoreInfoViewBodyDesktop> {
   int? _selectedIndex;
 
   void _onItemTapped(int index, Future<void> Function() navigationCallback) {
