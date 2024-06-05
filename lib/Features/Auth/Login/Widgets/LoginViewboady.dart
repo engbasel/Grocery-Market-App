@@ -43,7 +43,7 @@ class LoginViewBody extends StatelessWidget {
                         ],
                       ),
                     );
-                  } else if (!state.isLoading &&
+                  } else if (state.isLoading &&
                       state.email == 'Basel Ahmed' &&
                       state.password == 'password') {
                     Navigator.pushReplacement(
