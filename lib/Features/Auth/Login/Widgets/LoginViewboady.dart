@@ -46,7 +46,7 @@ class LoginViewBody extends StatelessWidget {
                   } else if (!state.isLoading &&
                       state.email == 'Basel Ahmed' &&
                       state.password == 'password') {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const CustomButtonNavigationBar(),
