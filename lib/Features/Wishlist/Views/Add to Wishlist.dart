@@ -50,7 +50,7 @@ class AddToWishlistBody extends StatelessWidget {
               child: customTextFormField(
                 labelText: 'Amount',
                 hintText: 'Amount',
-                prefixIcon: FontAwesomeIcons.code,
+                prefixIcon: FontAwesomeIcons.mountain,
               ),
             ),
             const Padding(
@@ -58,7 +58,7 @@ class AddToWishlistBody extends StatelessWidget {
               child: customTextFormField(
                 labelText: 'Brand (Optional )',
                 hintText: 'Brand (Optional )',
-                prefixIcon: FontAwesomeIcons.tiktok,
+                prefixIcon: FontAwesomeIcons.personHalfDress,
               ),
             ),
             const Padding(
