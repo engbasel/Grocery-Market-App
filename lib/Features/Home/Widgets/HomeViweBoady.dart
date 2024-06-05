@@ -98,19 +98,22 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           const SizedBox(height: 10),
           filteredItems.isNotEmpty
               ? CustomGridView(items: filteredItems)
-              : Center(
-                  child: Column(
-                    children: [
-                      Image.asset('assets/Search/NoData.png'),
-                      const Text(
-                        "Oops! We can’t find your product! But you can add it to wishlist",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
+              : Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Image.asset('assets/Search/NoData.png'),
+                        const Text(
+                          "Oops! We can’t find your product! But you can add it to wishlist",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 )
         ],
