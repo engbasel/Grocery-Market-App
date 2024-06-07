@@ -89,6 +89,7 @@ class SnackProductCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: CustomButton(
+                        TextColor: Colors.white,
                         widthAtFirstOfButton: 5,
                         iconButtonAtFirst: Icons.shop,
                         widthBetweenItems: 0,
