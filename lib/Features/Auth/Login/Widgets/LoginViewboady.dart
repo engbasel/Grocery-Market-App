@@ -141,6 +141,7 @@ class LoginViewBody extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 15, vertical: 5),
                             child: CustomButton(
+                              TextColor: Colors.white,
                               onTap: () => context.read<LoginCubit>().login(),
                               height: 50,
                               color: 0xff5ec401,
