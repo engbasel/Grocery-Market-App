@@ -28,14 +28,21 @@
 //   }
 // }
 
+// ***********************************************---------------------*************************************
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grocerymarket/Features/Auth/Login/Cubit/LoginCubit.dart';
 // import 'package:grocerymarket/Features/Auth/Signup/views/signupView.dart';
 import 'package:grocerymarket/Features/Snacks/views/Snacksview.dart';
 import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('userBox'); // Open a box for storing user data
   runApp(const GroceryApp());
 }
 
