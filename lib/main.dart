@@ -31,6 +31,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grocerymarket/Features/Auth/Login/Cubit/LoginCubit.dart';
+// import 'package:grocerymarket/Features/Auth/Signup/views/signupView.dart';
 import 'package:grocerymarket/Features/Snacks/views/Snacksview.dart';
 import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
 
@@ -50,6 +51,7 @@ class GroceryApp extends StatelessWidget {
         title: 'Grocery App',
         // home: LoginViewBody(), // Set LoginViewBody as the home
         home: const SplashScreenView(),
+        // home: SignupView(),
         routes: {
           'SnacksView': (context) =>
               const SnacksView(), // Define route for SnacksView

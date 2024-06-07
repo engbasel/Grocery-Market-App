@@ -42,14 +42,14 @@ class ChoosePasswordView extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: PasswordField(),
             ),
-            SizedBox(
-              height: height * 0.1,
-            ),
+            // SizedBox(
+            //   height: height * 0.1,
+            // ),
             CustomButton(
               TextColor: Colors.white,
-              width: width * 0.4,
+              width: width * 0.35,
               widthBetweenItems: width * 0.02,
-              widthAtFirstOfButton: width * 0.1,
+              widthAtFirstOfButton: width * 0.15,
               height: 50,
               color: 0xff5ec401,
               titleButton: 'Next',
@@ -61,9 +61,9 @@ class ChoosePasswordView extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(
-              height: height * 0.1,
-            ),
+            // SizedBox(
+            //   height: height * 0.1,
+            // ),
           ],
         ),
       ),

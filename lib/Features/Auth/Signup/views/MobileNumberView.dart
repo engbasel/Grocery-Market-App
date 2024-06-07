@@ -15,10 +15,10 @@ class MobileNumberView extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          SizedBox(
+            height: height * 0.25,
+            width: width * 0.25,
             child: Image.asset(
               'assets/Auth/PhonneNumbericon.png',
             ),
@@ -34,31 +34,34 @@ class MobileNumberView extends StatelessWidget {
             ),
           ),
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 5),
             child: PhoneNumberField(),
           ),
           SizedBox(
-            height: height * 0.1,
+            height: height * 0.025,
           ),
-          CustomButton(
-            TextColor: Colors.white,
-            width: width * 0.5,
-            widthBetweenItems: width * 0.1,
-            widthAtFirstOfButton: width * 0.1,
-            height: 50,
-            color: 0xff5ec401,
-            titleButton: 'Next',
-            iconButtonAtEnd: FontAwesomeIcons.arrowRight,
-            onTap: () {
-              pageController.nextPage(
-                duration: const Duration(milliseconds: 500),
-                curve: Curves.ease,
-              );
-            },
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
+            child: CustomButton(
+              TextColor: Colors.white,
+              width: width * 0.5,
+              widthBetweenItems: width * 0.1,
+              widthAtFirstOfButton: width * 0.1,
+              height: 50,
+              color: 0xff5ec401,
+              titleButton: 'Next',
+              iconButtonAtEnd: FontAwesomeIcons.arrowRight,
+              onTap: () {
+                pageController.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.ease,
+                );
+              },
+            ),
           ),
-          SizedBox(
-            height: height * 0.1,
-          ),
+          // SizedBox(
+          //   height: height * 0.1,
+          // ),
         ],
       ),
     );
