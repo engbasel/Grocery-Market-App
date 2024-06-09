@@ -53,7 +53,7 @@ class YourInformationView extends StatelessWidget {
                   ),
                   child: CustomButton(
                     widthBetweenItems: 50,
-                    widthAtFirstOfButton: width * 0.3,
+                    widthAtFirstOfButton: width * 0.2,
                     height: 50,
                     color: 0xff236cd9,
                     titleButton: 'Sync From Facebook',
@@ -76,7 +76,7 @@ class YourInformationView extends StatelessWidget {
                   TextColor: Colors.white,
                   width: width * 0.5,
                   widthBetweenItems: width * 0.1,
-                  widthAtFirstOfButton: width * 0.1,
+                  widthAtFirstOfButton: width * 0.2,
                   height: 50,
                   color: 0xff5ec401,
                   titleButton: 'Next',
