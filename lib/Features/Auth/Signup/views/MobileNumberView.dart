@@ -17,7 +17,7 @@ class MobileNumberView extends StatelessWidget {
       body: ListView(
         children: [
           SizedBox(
-            height: height * 0.25,
+            height: height * 0.5,
             width: width * 0.25,
             child: Image.asset(
               'assets/Auth/PhonneNumbericon.png',
