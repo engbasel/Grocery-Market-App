@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocerymarket/Features/Auth/Login/views/LoginView.dart';
 import 'package:grocerymarket/Features/Splash/views/SplashScreenView.dart';
 import '../../../../Core/widgets/CoustomTextFormFildes/PhoneNumberField.dart';
 import '../../../../Core/widgets/CustomButton.dart';
@@ -67,7 +68,7 @@ class EnterVerificationCodeView extends StatelessWidget {
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) {
-                    return const SplashScreenView();
+                    return const LoginView();
                   },
                 ));
               },
